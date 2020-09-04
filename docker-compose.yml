@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  ss:
+    image: shadowsocks/shadowsocks-libev
+    command: ss-local -c /etc/shadowsocks-libev/config.json -u
+    volumes:
+      - ./ss-config.json:/etc/shadowsocks-libev/config.json
+
+  polipo:
+    image: vimagick/polipo
+    command: polipo -c /etc/polipo.conf
+    volumes:
+      - ./polipo.conf:/etc/polipo.conf
+    ports:
+      - 1087:1087

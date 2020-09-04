@@ -1,0 +1,9 @@
+{
+  "server": "server ip",
+  "server_port": 8888,
+  "method": "rc4-md5",
+  "password": "password",
+  "timeout": 5,
+  "fast_open": true,
+  "local_port": 1086
+}
