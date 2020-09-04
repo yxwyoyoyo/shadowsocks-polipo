@@ -9,8 +9,8 @@ services:
 
   polipo:
     image: vimagick/polipo
-    command: polipo -c /etc/polipo.conf
-    volumes:
-      - ./polipo.conf:/etc/polipo.conf
+    command:
+      socksParentProxy=ss:1086
+      socksProxyType=socks5
     ports:
-      - 1087:1087
+      - 1087:8123
